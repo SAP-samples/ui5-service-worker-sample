@@ -10,7 +10,7 @@ npm run start
 
 Access url via
 ```bash
-curl -k https://localhost:1337/static/main.js
+curl -k https://localhost:1337/static/ui5swlib.js
 ```
 
 In your app create a file called `sw.js` in your app's root folder
@@ -21,26 +21,32 @@ self.worker.initFromManifest().then(() => {
 	console.log("successfully initialized manifest");
 });
 ```
-
-Add service worker in html:
+In your app create a file called `regsw.js` in your app's root folder
+```javascript
+// service worker registration
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').then(() => {
+            console.log('service worker successfully registered');
+        });
+    });
+}
+```
+Load `regsw.js` in html:
 
 ```html
-<script>
-    // service worker registration
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/sw.js').then(() => {
-                console.log('service worker successfully registered');
-            });
-        });
-    }
-</script>
+<script src="regsw.js"></script>
 ```
 
 ## configuration
 
-### strategies
-cache strategies must be distinct (regarding urls) otherwise the first configured one wins.
+The configuration can be either provided using the manifest.json or programmatically after registering the service worker.
+The ui5-service-worker provides several configuration options to manage the cached resources.
+
+### cache strategies
+Cache strategies can be configured for URLs using patterns.
+A URL should only match one pattern associated with one strategy.
+An overlap is not supported and means that the first match strategy is taken and others are ignored.
 
 #### static
 static cache which does not get updated. Cache Management has to be done manually.
@@ -51,9 +57,13 @@ static cache which does not get updated. Cache Management has to be done manuall
     "type": "static"
 }
 ```
+The indicator is the start of the URL,
+e.g. URLs starting with: `"https://localhost:8443/index"`, e.g. `"https://localhost:8443/index.js"`, `"https://localhost:8443/index/my.js"`
+The resulting localStorage's name starts with `STATIC-`.
+
 
 #### ui5resource
-cache which checks the UI5 version and updates the cache upon new version (uses sap-ui-version.json)
+cache which checks the UI5 version and updates the cache upon new version (uses `version` in sap-ui-version.json)
 
 ```json
 {
@@ -61,9 +71,12 @@ cache which checks the UI5 version and updates the cache upon new version (uses 
     "type": "ui5resource"
 }
 ```
+The UI5 version is checked once a request to `/sap-ui-core.js` is performed.
+This avoids constant checking for a new version.
+The resulting localStorage's name starts with `resources-`.
 
 #### application
-cache which checks the application version and updates the cache upon new version (uses manifest.json)
+cache which checks the application version and updates the cache upon new version (uses `sap.app>applicationVersion` in manifest.json)
 
 ```json
 {
@@ -87,6 +100,10 @@ e.g. if `initialRequestEndings` differs from default: `["/index.html"]`
 `manifestRootUrl` can also be specified, if the manifest.json url is different from `/manifest.json`
 
 
+The application version is checked once a request to the value from `initialRequestEndings` is performed.
+This avoids constant checking for a new version.
+The resulting localStorage's name starts with `app-`.
+
 #### precache
 caches urls and assigns them a version. Cache gets filled before the application starts.
 The cache can be manually invalidated by increasing the configured version number.
@@ -103,13 +120,24 @@ The urls must be resource urls.
 }
 ```
 
-### init from manifest.json
+The resulting localStorage's name starts with `PRE-`.
 
-this will precache 2 urls `https://localhost:8443/controller/App.controller.js` and `https://localhost:8443/view/App.view.xml`
+### Initialize configuration from manifest.json
+
+In the service worker (sw.js) the configuration ba initialized from the manifest.json using
+```js
+self.worker.initFromManifest()
+```
+
+The example below will precache 2 urls `https://localhost:8443/controller/App.controller.js` and `https://localhost:8443/view/App.view.xml`
 and use a static cache for `https://localhost:8443/index`
 and a resource cache which checks the version for updates coming from `https://sapui5.hana.ondemand.com/resources`
 
-
+- sw.js
+```js
+self.worker.initFromManifest()
+```
+- manifest.json
 ```json
 {
 	"_version": "1.12.0",
@@ -146,12 +174,18 @@ and a resource cache which checks the version for updates coming from `https://s
 ```
 
 
-### init in service worker (sw.js)
+### Initialize configuration programmatically
 
-this will precache 2 urls `https://localhost:8443/controller/App.controller.js` and `https://localhost:8443/view/App.view.xml`
+In the service worker (sw.js) the configuration ba initialized programmatically using
+```js
+self.worker.init([])
+```
+
+The example below will precache 2 urls `https://localhost:8443/controller/App.controller.js` and `https://localhost:8443/view/App.view.xml`
 and use a static cache for `https://localhost:8443/index`
 and a resource cache which checks the version for updates coming from `https://sapui5.hana.ondemand.com/resources`
 
+- sw.js
 ```javascript
 self.worker.init([{
 	urls: [
