@@ -1,0 +1,35 @@
+{
+  "name": "ui5-service-worker",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "ava --serial",
+    "setup": "webpack --config webpack.config.js",
+    "setup-es5": "webpack --config webpack.es5.config.js",
+    "setup-watch": "webpack --watch --config webpack.config.js",
+    "start": "npm run setup && node src/server.js"
+  },
+  "ava": {
+    "require": [
+      "esm"
+    ]
+  },
+  "keywords": [],
+  "dependencies": {
+    "devcert-sanscache": "^0.4.8",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "ava": "^3.14.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "babel-preset-env": "^1.7.0",
+    "esm": "^3.2.25",
+    "sinon": "^9.2.2",
+    "webpack": "^5.11.0",
+    "webpack-cli": "^4.2.0"
+  }
+}

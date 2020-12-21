@@ -12,6 +12,8 @@ The ui5-service-worker-sample consists of:
 1. openui5-sample-app
     * Version: 0.2.0
     * Commit: dc366078faa147c193eda06ab10958e1330e5c20
+1. ui5-service-worker
+    * Version: 1.0.0
 
 ## Requirements
 
