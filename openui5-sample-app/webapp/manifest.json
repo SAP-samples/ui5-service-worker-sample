@@ -2,7 +2,23 @@
 	"_version": "1.12.0",
 	"sap.app": {
 		"id": "sap.ui.demo.todo",
-		"type": "application"
+		"type": "application",
+		"applicationVersion": {
+			"version": "0.2.0"
+		},
+		"serviceWorker": {
+			"file" : "sw.js",
+			"config": [
+				{
+					"url": "http://localhost:8080",
+					"type": "application"
+				},
+				{
+					"url": "https://sapui5.hana.ondemand.com/resources",
+					"type": "ui5resource"
+				}
+			]
+		}
 	},
 	"sap.ui5": {
 		"dependencies": {
