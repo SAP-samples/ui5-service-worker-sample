@@ -5,7 +5,7 @@
 
 ## Description
 
-This sample demonstrates how the Service Worker API, available in modern web browsers, could be used in a UI5 app to realize different caching strategies.
+This sample demonstrates how the [Service Worker API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API), available in modern web browsers, could be used in a UI5 app to realize different caching strategies.
 
 It includes the [openui5-sample-app](https://github.com/SAP/openui5-sample-app) and combines it with the ui5-service-worker code itself.
 
@@ -64,7 +64,7 @@ Find additional configuration options of the ui5-service-worker in the
 
 ## UI5con Presentation
 
-This sample project was derived to showcase features originally presented at [UI5con 2019](https://openui5.org/ui5con/germany2019/material2019.html):
+This sample project was derived to showcase features originally presented at [UI5con](https://openui5.org/ui5con/germany2019/material2019.html):
 * [Presentation Slides](https://tobiasso85.github.io/ui5con2019-service-worker-slides)
 * [Video Recording](https://youtu.be/z_bwa1wMyT4)
 
