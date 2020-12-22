@@ -8,16 +8,6 @@
 This sample demonstrates the use of the ui5-service-worker within the openui5-sample-app.
 It can be used as an example for integrating a service worker into the own UI5 freestyle app.
 
-
-## Structure
-
-The ui5-service-worker-sample consists of:
-1. openui5-sample-app
-    * Version: 0.2.0
-    * Commit: dc366078faa147c193eda06ab10958e1330e5c20
-1. ui5-service-worker
-    * Version: 1.0.0
-
 ## Requirements
 
 - [Node.js](https://nodejs.org/) Version 10 or later
@@ -39,16 +29,28 @@ The ui5-service-worker-sample consists of:
     npm start
     ```
    
-1. (Optional) Build the application and start a local server
+1. Navigate to
+    http://localhost:8080/index.html
+    
+    
+## Additional
+1. Build the application and start a local server
     ```sh
     npm start-dist
     ```
-   
-1. Navigate your browser to
-    1. http://localhost:8080/index.html
-    1. http://localhost:8080/index-cdn.html
+1. UI5 resources from CDN:
+    http://localhost:8080/index-cdn.html
+    
+## Content Structure
 
-## Integration
+The ui5-service-worker-sample consists of:
+1. openui5-sample-app
+    * Version: 0.2.0
+    * Commit: dc366078faa147c193eda06ab10958e1330e5c20
+1. ui5-service-worker
+    * Version: 1.0.0
+
+## Integrate into own app
 Detailed information about the integration can be found in the
 [Integration](./docs/integration.md) section.
 
