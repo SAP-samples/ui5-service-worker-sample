@@ -5,8 +5,11 @@
 
 ## Description
 
-This sample demonstrates the use of the ui5-service-worker within the openui5-sample-app.
-It can be used as an example for integrating a service worker into the own UI5 freestyle app.
+This sample demonstrates how the Service Worker API, available in modern web browsers, could be used in a UI5 app to realize different caching strategies.
+
+It includes the [openui5-sample-app](https://github.com/SAP/openui5-sample-app) and combines it with the ui5-service-worker code itself.
+
+*DISCLAIMER*: This sample demonstrates possible usages of service workers for caching strategies of an UI5 app. You have to figure out what parts to adopt for your own productive applications.
 
 ## Requirements
 
@@ -28,35 +31,42 @@ It can be used as an example for integrating a service worker into the own UI5 f
     ```sh
     npm start
     ```
-   
+
 1. Navigate to
     http://localhost:8080/index.html
-    
-    
-## Additional
-1. Build the application and start a local server
+
+
+## Alternative Scenarios
+
+* Build the sample application to serve this preload variant from a local server
     ```sh
-    npm start-dist
+    npm run start-dist
     ```
-1. UI5 resources from CDN:
-    http://localhost:8080/index-cdn.html
-    
+* Load the UI5 resources from CDN via http://localhost:8080/index-cdn.html
+
 ## Content Structure
 
-The ui5-service-worker-sample consists of:
+This ui5-service-worker-sample project consists of:
 1. openui5-sample-app
     * Version: 0.2.0
     * Commit: dc366078faa147c193eda06ab10958e1330e5c20
+    * via public repository https://github.com/SAP/openui5-sample-app
 1. ui5-service-worker
     * Version: 1.0.0
+    * via local folder [ui5-service-worker/](https://github.com/SAP-samples/ui5-service-worker-sample/tree/main/ui5-service-worker)
 
-## Integrate into own app
-Detailed information about the integration can be found in the
-[Integration](./docs/integration.md) section.
+## Integrate into Own App
+Follow the detailed [Integration](./docs/integration.md) section on how you could extract and integrate the ui5-service-worker into your own application.
 
-## Configuration options
-Additional configuration options for the ui5-service-worker can be found in the
-[Configuration Section](./ui5-service-worker/README.md#configuration).
+## Configuration
+Find additional configuration options of the ui5-service-worker in the
+[Configuration](./ui5-service-worker/README.md#configuration) section.
+
+## UI5con Presentation
+
+This sample project was derived to showcase features originally presented at [UI5con 2019](https://openui5.org/ui5con/germany2019/material2019.html):
+* [Presentation Slides](https://tobiasso85.github.io/ui5con2019-service-worker-slides)
+* [Video Recording](https://youtu.be/z_bwa1wMyT4)
 
 ## Known Issues
 No major bugs known.
