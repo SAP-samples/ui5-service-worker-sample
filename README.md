@@ -19,7 +19,7 @@ It includes the [openui5-sample-app](https://github.com/SAP/openui5-sample-app) 
 
 1. Clone this repository and navigate into it
     ```sh
-    git clone git@github.com:SAP-samples/ui5-service-worker-sample.git
+    git clone https://github.com/SAP-samples/ui5-service-worker-sample.git
     cd ui5-service-worker-sample
     ```
 1. Install all dependencies
