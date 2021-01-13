@@ -14,7 +14,7 @@
 					"type": "application"
 				},
 				{
-					"url": "https://sapui5.hana.ondemand.com/resources",
+					"url": "https://openui5.hana.ondemand.com/resources",
 					"type": "ui5resource"
 				}
 			]

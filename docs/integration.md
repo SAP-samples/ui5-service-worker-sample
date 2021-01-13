@@ -41,7 +41,7 @@ It also requires the service worker cache configuration for the sources in `sap.
                         "type": "application"
                     },
                     {
-                        "url": "https://sapui5.hana.ondemand.com/resources",
+                        "url": "https://openui5.hana.ondemand.com/resources",
                         "type": "ui5resource"
                     }
                 ]
@@ -61,7 +61,7 @@ The types use different mechanisms to check if cached resources must be updated.
 Type `application` uses `applicationVersion` in the `manifest.json`, whereas `ui5resource` uses the version provided by `sap-ui-version.json`.
 
 Resources coming from URLs which start with `http://localhost:8080` use the `application` cache.
-Resources coming from URLs which start with `https://sapui5.hana.ondemand.com/resources` use the `ui5resource` cache.
+Resources coming from URLs which start with `https://openui5.hana.ondemand.com/resources` use the `ui5resource` cache.
 Each cache has its own versioning and the type of cache defines the specific update strategy.
 For instance, if a new application version was released, the `ui5resource` cache is unaffected whereas the `application` cache gets updated.
 
@@ -126,7 +126,7 @@ In order to load UI5 library resources from CDN:
 - `index.html`
     ```html
     <script id="sap-ui-bootstrap"
-        src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+        src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
         ... />
     ```
 
@@ -136,7 +136,7 @@ In order to load UI5 library resources from CDN:
     Configure your UI5 project accordingly, such that only async requests are used. Consult the UI5 framework documentation for more information, e.g.
     * [Use Asynchronous Loading](https://openui5.hana.ondemand.com/#/topic/676b636446c94eada183b1218a824717)
     * [Is Your Application Ready for Asynchronous Loading?](https://openui5.hana.ondemand.com/topic/493a15aa978d4fe9a67ea9407166eb01)
-    * [Performance Checklist](https://sapui5.hana.ondemand.com/#/topic/9c6400eb7dc145b78e94a81e6e390780)
+    * [Performance Checklist](https://openui5.hana.ondemand.com/#/topic/9c6400eb7dc145b78e94a81e6e390780)
 
 1. Additionally, it only works in combination with https. See for instance:
     *  [Using Service Workers](https://developer.mozilla.org/docs/Web/API/Service_Worker_API/Using_Service_Workers)
