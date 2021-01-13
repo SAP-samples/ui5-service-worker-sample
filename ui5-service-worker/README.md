@@ -54,7 +54,7 @@ In the service worker (file `sw.js`) the configuration can be initialized from t
 self.worker.initFromManifest();
 ```
 
-The example below will *precache* two URLs `https://localhost:8443/controller/App.controller.js` and `https://localhost:8443/view/App.view.xml`. Moreover, it uses a *static cache* for `https://localhost:8443/index`, and a *resource cache*, which checks the version for updates via `https://sapui5.hana.ondemand.com/resources`
+The example below will *precache* two URLs `https://localhost:8443/controller/App.controller.js` and `https://localhost:8443/view/App.view.xml`. Moreover, it uses a *static cache* for `https://localhost:8443/index`, and a *resource cache*, which checks the version for updates via `https://openui5.hana.ondemand.com/resources`
 
 - `sw.js`
     ```js
@@ -80,7 +80,7 @@ The example below will *precache* two URLs `https://localhost:8443/controller/Ap
                         "type": "static"
                     },
                     {
-                        "url": "https://sapui5.hana.ondemand.com/resources",
+                        "url": "https://openui5.hana.ondemand.com/resources",
                         "type": "ui5resource"
                     },
                     {
@@ -106,7 +106,7 @@ self.worker.init([]);
 ```
 
 The example below will *precache* two URLs `https://localhost:8443/controller/App.controller.js` and `https://localhost:8443/view/App.view.xml`. It uses a *static cache* for `https://localhost:8443/index`
-and a *resource cache*, which checks the version for updates via `https://sapui5.hana.ondemand.com/resources`
+and a *resource cache*, which checks the version for updates via `https://openui5.hana.ondemand.com/resources`
 
 - `sw.js`
     ```javascript
@@ -121,7 +121,7 @@ and a *resource cache*, which checks the version for updates via `https://sapui5
         url: "https://localhost:8443/index",
         type: "static"
     }, {
-        url: "https://sapui5.hana.ondemand.com/resources",
+        url: "https://openui5.hana.ondemand.com/resources",
         type: "ui5resource"
     }]).then(() => {
         console.log("successfully initialized");
@@ -170,7 +170,7 @@ It uses field `version` in `sap-ui-version.json` for the version comparison.
 
 ```json
 {
-    "url": "https://sapui5.hana.ondemand.com/resources",
+    "url": "https://openui5.hana.ondemand.com/resources",
     "type": "ui5resource"
 }
 ```
