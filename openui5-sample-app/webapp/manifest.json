@@ -14,6 +14,20 @@
 					"type": "application"
 				},
 				{
+					"url": "http://localhost:8080/resources",
+					"type": "ui5resource",
+					"priority": 1
+				},
+				{
+					"url": "https://localhost:8443",
+					"type": "application"
+				},
+				{
+					"url": "https://localhost:8443/resources",
+					"type": "ui5resource",
+					"priority": 1
+				},
+				{
 					"url": "https://openui5.hana.ondemand.com/resources",
 					"type": "ui5resource"
 				}
