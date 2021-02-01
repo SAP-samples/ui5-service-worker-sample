@@ -134,10 +134,13 @@ export const init = async aConfigs => {
 		}
 
 		if (strategyInstance instanceof CacheStrategyBase) {
+			if (oConfig.priority) {
+				strategyInstance.priority = oConfig.priority;
+			}
 			oStrategyManager.addStrategy(strategyInstance);
 			return strategyInstance.init();
 		} else {
-			throw new Error(`Strategy must be of type CacheStrategy`);
+			throw new Error(`Strategy must be of type CacheStrategyBase`);
 		}
 	});
 	await Promise.all(apConfigs);

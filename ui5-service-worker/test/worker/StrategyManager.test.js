@@ -77,6 +77,37 @@ test("Should ensure that strategies are added and can be retrieved", function(as
 	);
 });
 
+test("Multiple strategies matching same pattern", function(assert) {
+	var strategy = createStrategy("http://localhost:8080/");
+	var otherStrategy = createStrategy("http://localhost:8080/otherUrl");
+	var otherSubStrategy = createStrategy("http://localhost:8080/otherUrl/wow");
+	otherStrategy.priority = 1;
+	otherSubStrategy.priority = 2;
+	oStrategyManager.addStrategy(strategy);
+	oStrategyManager.addStrategy(otherStrategy);
+	oStrategyManager.addStrategy(otherSubStrategy);
+	assert.deepEqual(
+		oStrategyManager.getStrategy("http://localhost:8080/myurl"),
+		strategy
+	);
+	assert.deepEqual(
+		oStrategyManager.getStrategy("http://localhost:8080/otherUrl"),
+		otherStrategy
+	);
+	assert.deepEqual(
+		oStrategyManager.getStrategy("http://localhost:8080/otherUrl/wow"),
+		otherSubStrategy
+	);
+	assert.deepEqual(
+		oStrategyManager.getStrategy("http://localhost:8080/otherUrl/wow/omg"),
+		otherSubStrategy
+	);
+	assert.deepEqual(
+		oStrategyManager.getStrategy("http://localhost:8080/unknownUrl"),
+		strategy
+	);
+});
+
 test("Should ensure that strategy is initialized", async assert => {
 	var strategy = createStrategy("http://localhost:8080/myurl");
 	var initSpy = sinon.spy(strategy, "init");

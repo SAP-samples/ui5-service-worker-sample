@@ -10,7 +10,16 @@ export default class StrategyManager {
 	 * @param strategy
 	 */
 	addStrategy(strategy) {
+		strategy.priority = strategy.priority || 0;
 		this.strategies.push(strategy);
+		if (strategy.priority) {
+			this.strategies.sort((a, b) => {
+				if (a.priority === b.priority) {
+					return 0;
+				}
+				return b.priority > a.priority ? 1 : -1;
+			});
+		}
 	}
 
 	static async ensureStrategyIsInitialized(strategy) {

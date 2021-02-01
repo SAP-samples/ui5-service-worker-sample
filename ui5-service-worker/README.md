@@ -115,10 +115,11 @@ and a *resource cache*, which checks the version for updates via `https://openui
             "https://localhost:8443/controller/App.controller.js",
             "https://localhost:8443/view/App.view.xml"
         ],
+        priority: 1,
         version: "1.2.3",
         type: "precache"
     }, {
-        url: "https://localhost:8443/index",
+        url: "https://localhost:8443/",
         type: "static"
     }, {
         url: "https://openui5.hana.ondemand.com/resources",
@@ -128,6 +129,25 @@ and a *resource cache*, which checks the version for updates via `https://openui
     });
     ```
 
+### Cache Priority
+Caches can be prioritized by assigning them a `priority`, the higher prioritized ones are taken first if there is an overlap.
+
+Example:
+```json
+[{
+	"url": "http://localhost:8080",
+	"type": "application"
+},
+{
+    "url": "http://localhost:8080/resources",
+    "type": "ui5resource",
+    "priority": 1
+}]
+```
+
+By default all caches have priority `0`. In this example URLs with `/resources` are always cached using `ui5resource` cache while all others are cached using `application` cache. 
+
+
 ### Cache Types
 Various cache types can be configured for URLs using patterns. The individual type defines the cache update strategy to be used:
 * `application`
@@ -135,7 +155,8 @@ Various cache types can be configured for URLs using patterns. The individual ty
 * `static`
 * `precache`
 
-_Note: An overlap of URLs is not supported and means that the first matching cache type is taken and others are ignored._
+_Note: An overlap of URLs and means that the first matching cache type is taken and others are ignored.
+This can be avoided by using property `priority` a higher priority means that this type will be looked at first before looking at the others._
 
 
 #### Type `application`
