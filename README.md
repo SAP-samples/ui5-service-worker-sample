@@ -35,14 +35,9 @@ It includes the [openui5-sample-app](https://github.com/SAP/openui5-sample-app) 
 1. Navigate to
     http://localhost:8080/index.html
 
+## Overview
+![Overview](assets/overview.png)
 
-## Alternative Scenarios
-
-* Build the sample application to serve this preload variant from a local server
-    ```sh
-    npm run start-dist
-    ```
-* Load the UI5 resources from CDN via http://localhost:8080/index-cdn.html
 
 ## Content Structure
 
@@ -67,6 +62,15 @@ Find additional configuration options of the ui5-service-worker in the
 This sample project was derived to showcase features originally presented at [UI5con](https://openui5.org/ui5con/germany2019/material2019.html):
 * [Presentation Slides](https://tobiasso85.github.io/ui5con2019-service-worker-slides)
 * [Video Recording](https://youtu.be/z_bwa1wMyT4)
+
+
+## Alternative Scenarios
+
+* Build the sample application to serve this preload variant from a local server
+    ```sh
+    npm run start-dist
+    ```
+* Load the UI5 resources from CDN via http://localhost:8080/index-cdn.html
 
 ## Known Issues
 No major bugs known.
