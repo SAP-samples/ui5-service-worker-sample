@@ -11,7 +11,8 @@
 			"config": [
 				{
 					"url": "http://localhost:8080",
-					"type": "application"
+					"type": "application",
+					"initialRequestEndings": ["/index.html", "/index-cdn.html"]
 				},
 				{
 					"url": "http://localhost:8080/resources",
@@ -20,7 +21,8 @@
 				},
 				{
 					"url": "https://localhost:8443",
-					"type": "application"
+					"type": "application",
+					"initialRequestEndings": ["/index.html", "/index-cdn.html"]
 				},
 				{
 					"url": "https://localhost:8443/resources",
