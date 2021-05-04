@@ -5,8 +5,8 @@
   "scripts": {
     "postinstall": "cd ui5-service-worker && npm install && cd ../openui5-sample-app && npm install",
     "build-service-worker": "cd ui5-service-worker && npm run setup",
-    "start": "cd openui5-sample-app && npm run start -- --h2 --o index.html",
-    "start-dist": "cd openui5-sample-app && npm run build && npm run serve-dist -- --port 8080",
+    "start-h2": "cd openui5-sample-app && npm run start -- --h2 --o index.html",
+    "start": "cd openui5-sample-app && npm run build && npm run serve-dist -- --port 8080",
     "start-dist-self-contained": "cd openui5-sample-app && npm run build-self-contained && npm run serve-dist -- --port 8080"
   },
   "workspaces": [

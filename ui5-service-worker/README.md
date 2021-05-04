@@ -4,6 +4,8 @@ This sample implementation of a UI5 service worker uses [Service Worker](https:/
 
 The two most prominent cache configurations are `application`, which provides a cache specific for UI5 apps, and `ui5resource`, which provides a cache specific for UI5 library resources. Other configurations allow for `static` caches and `precache`.
 
+![Overview](../assets/overview.png)
+
 ## Installation
 
 1. Start local server with

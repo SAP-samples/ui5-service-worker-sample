@@ -33,10 +33,10 @@ It includes the [openui5-sample-app](https://github.com/SAP/openui5-sample-app) 
     ```
 
 1. Navigate to
-    http://localhost:8080/index.html
+    http://localhost:8080/index-cdn.html
 
-## Overview
-![Overview](assets/overview.png)
+## Video
+![Video](assets/service-worker.gif)
 
 
 ## Content Structure
@@ -66,11 +66,10 @@ This sample project was derived to showcase features originally presented at [UI
 
 ## Alternative Scenarios
 
-* Build the sample application to serve this preload variant from a local server
+* Build the sample application to serve this preload variant from a local server using h2
     ```sh
-    npm run start-dist
+    npm run start-h2
     ```
-* Load the UI5 resources from CDN via http://localhost:8080/index-cdn.html
 
 ## Known Issues
 No major bugs known.
