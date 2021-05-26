@@ -111,7 +111,7 @@ Add the `regsw.js` that will register the service worker:
 Finally, the registration must be included into the startup file before any other script, e.g. early into the `<head>` section of the `index.html`:
 - `index.html`
     ```html
-    <script src="regsw.js"/>
+    <script src="regsw.js"></script>
     ```
 
 ## Verification
