@@ -7,6 +7,7 @@
     "build-service-worker": "cd ui5-service-worker && npm run setup",
     "start-h2": "cd openui5-sample-app && npm run start -- --h2 --o index.html",
     "start": "cd openui5-sample-app && npm run build && npm run serve-dist -- --port 8080",
+    "test": "cd ui5-service-worker && npm test",
     "start-dist-self-contained": "cd openui5-sample-app && npm run build-self-contained && npm run serve-dist -- --port 8080"
   },
   "workspaces": [
