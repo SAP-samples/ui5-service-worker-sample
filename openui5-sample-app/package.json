@@ -16,12 +16,12 @@
 	},
 	"dependencies": {},
 	"devDependencies": {
-		"@ui5/cli": "^2.10.3",
-		"eslint": "^7.25.0",
-		"karma": "^6.3.2",
+		"@ui5/cli": "^2.12.1",
+		"eslint": "^7.32.0",
+		"karma": "^6.3.4",
 		"karma-chrome-launcher": "^3.1.0",
 		"karma-coverage": "^2.0.3",
-		"karma-ui5": "^2.3.3",
+		"karma-ui5": "^2.3.4",
 		"local-web-server": "^4.2.1",
 		"rimraf": "^3.0.2"
 	}
