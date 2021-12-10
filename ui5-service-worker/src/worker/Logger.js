@@ -4,14 +4,19 @@ let enabled = false;
 
 export default class Logger {
 
-	log(message) {
+	debug() {
 		if (enabled) {
-			console.log(message);
+			console.debug.apply(this, arguments);
 		}
 	}
-	error(message) {
+	log() {
 		if (enabled) {
-			console.error(message);
+			console.log.apply(this, arguments);
+		}
+	}
+	error() {
+		if (enabled) {
+			console.error.apply(this, arguments);
 		}
 	}
 
