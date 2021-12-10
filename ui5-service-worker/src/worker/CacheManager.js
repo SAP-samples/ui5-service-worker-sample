@@ -87,7 +87,18 @@ export default class CacheManager {
 		if (request.method === "HEAD" || request.method === "POST") {
 			return this;
 		}
-		await this.cache.put(request, response.clone());
+		const responseClone = response.clone();
+		await this.cache.put(request, responseClone).catch(err=>{
+			// failing to add a request/response to cache may have different reasons.
+			// for example, if response header "Vary" has value "*"
+			// => we log the fact that we failed to "log" level and the error, request and response objects to "debug" level
+			console.log(`Failed to add request to cache (cause is logged on debug level): ${request.method} to ${request.url}`,
+			"You may want to consider adjusting stragtegy configuration to exclude this URLs in the first place");
+			console.debug("Failed to add request to cache, error, request, response: ", err, request, responseClone);
+			// We deliberately used console.log/console.debug here, rather than the respoective Logger.getLogger("cache-put").log / .debug
+			// since the above may be a hint to developers to exclude the url paths from the cache strategy in the first place,
+			// and Logger class starts in disabled mode by defailt
+		});
 		return this;
 	}
 
