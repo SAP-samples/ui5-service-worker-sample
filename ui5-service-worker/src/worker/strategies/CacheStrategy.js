@@ -114,6 +114,12 @@ export default class CacheStrategy {
 			return;
 		}
 
+		if (!cache) {
+			// (at least) on safari, in some situations, cache is not defined on first requests
+			// return to avoid runtime error in SW
+			return new self.Response("cache is undefined");
+		}
+
 		let response = await cache.get(request);
 
 		if (!response) {
