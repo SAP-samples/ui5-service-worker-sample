@@ -42,8 +42,7 @@
 			"libs": {
 				"sap.ui.core": {},
 				"sap.m": {},
-				"sap.f": {},
-				"sap.ui.unified": {}
+				"sap.f": {}
 			}
 		},
 		"rootView": {
