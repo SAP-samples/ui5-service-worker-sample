@@ -14,9 +14,10 @@ var appJsonContent = {
 };
 
 test.beforeEach(function() {
-	oApplicationCacheStrategy = new ApplicationCacheStrategy(
-		"http://localhost:8080/res"
-	);
+	oApplicationCacheStrategy = new ApplicationCacheStrategy({
+		url: "http://localhost:8080/res",
+		exclude: "/service/"
+	});
 	const globalSelf = {
 		fetch: function() {}
 	};
@@ -43,6 +44,21 @@ test("Should check if requested resource is the initial request", function(asser
 			"http://localhost:8080/res/index.html",
 			"index.html request is initial"
 		)
+	);
+});
+
+test("Should check if requested url matches", function(assert) {
+	assert.truthy(
+		oApplicationCacheStrategy.matches(
+			"http://localhost:8080/res/my.js"
+		),
+		"matches"
+	);
+	assert.falsy(
+		oApplicationCacheStrategy.matches(
+			"http://localhost:8080/service/$manifest"
+		),
+		"doesn't match"
 	);
 });
 

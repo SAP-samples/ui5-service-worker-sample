@@ -5,8 +5,22 @@ import ManifestConfig from "../config/ManifestConfig";
 export default class ApplicationCacheStrategy extends CacheStrategy {
 	constructor(config) {
 		super(config.url);
+		// no exclusion if undefined => backward compatibility
+		this.excludeRegExp = typeof config.exclude === "string" && new RegExp(config.exclude);
 		this.rootUrl = config.manifestRootUrl || config.url;
 		this.initialRequestEndings = config.initialRequestEndings || ["/index.html"];
+	}
+
+	/**
+	 * application cache specfic logic
+	 * - if exclusin regexp is provided and matches the URL, the URL is declined
+	 * - proceed with super implementation otherwise
+	 *
+	 * @param url
+	 * @returns {boolean} whether or not url matches
+	 */
+	matches(url) {
+		return !(this.excludeRegExp && this.excludeRegExp.test(url)) && super.matches(url);
 	}
 
 	isInitialRequest(url) {

@@ -185,6 +185,27 @@ The initial request is identified by the `initialRequestEndings` option, whose d
 
 The `manifestRootUrl` may also be specified, if the URL to `manifest.json` is different from `/manifest.json`.
 
+You may want to exclude some patterns from being cahced, e.g. backand service calls
+(otherwise you may end up caching stale CSRF tokens or have other unwanted side effects).
+The field `exclude` accepts a single regular expressin in string form. (_Note: `new RegExp("/service/")` is not the same as `/service/`_)
+
+Examples:
+```json
+{
+    "url": "https://localhost:8443",
+    "type": "application",
+    "exclude": "/service/"
+}
+```
+
+```json
+{
+    "url": "https://localhost:8443",
+    "type": "application",
+    "exclude": "lorem/ipsum/.*/(Z_TEST_SRV|Z_OTHER_SRV)/"
+}
+```
+
 The resulting name of the cache starts with `app-`.
 
 #### Type `ui5resource`
