@@ -44,7 +44,7 @@ It includes the [openui5-sample-app](https://github.com/SAP/openui5-sample-app) 
 This ui5-service-worker-sample project consists of:
 1. openui5-sample-app
     * Version: 0.2.0
-    * Commit: dd49883a79202b9134d5a9222a10f712a1ab06d3
+    * Commit: f38e441755cf90f2b80093e3a83bfa5a48be497e
     * via public repository https://github.com/SAP/openui5-sample-app
 1. ui5-service-worker
     * Version: 1.0.0
