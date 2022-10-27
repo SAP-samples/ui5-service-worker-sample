@@ -2,39 +2,7 @@
 	"_version": "1.12.0",
 	"sap.app": {
 		"id": "sap.ui.demo.todo",
-		"type": "application",
-		"applicationVersion": {
-			"version": "0.2.0"
-		},
-		"serviceWorker": {
-			"file" : "sw.js",
-			"config": [
-				{
-					"url": "http://localhost:8080",
-					"type": "application",
-					"initialRequestEndings": ["/index.html", "/index-cdn.html"]
-				},
-				{
-					"url": "http://localhost:8080/resources",
-					"type": "ui5resource",
-					"priority": 1
-				},
-				{
-					"url": "https://localhost:8443",
-					"type": "application",
-					"initialRequestEndings": ["/index.html", "/index-cdn.html"]
-				},
-				{
-					"url": "https://localhost:8443/resources",
-					"type": "ui5resource",
-					"priority": 1
-				},
-				{
-					"url": "https://openui5.hana.ondemand.com/resources",
-					"type": "ui5resource"
-				}
-			]
-		}
+		"type": "application"
 	},
 	"sap.ui5": {
 		"dependencies": {
