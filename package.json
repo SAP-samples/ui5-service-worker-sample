@@ -3,10 +3,10 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "postinstall": "cd ui5-service-worker && npm install && cd ../openui5-sample-app && npm install",
+    "build-ui5": "cd openui5-sample-app && npm run build",
+    "build-h2": "cd openui5-sample-app && npm run build --h2",
     "build-service-worker": "cd ui5-service-worker && npm run setup",
-    "start-h2": "cd openui5-sample-app && npm run start -- --h2 --o index.html",
-    "start": "cd openui5-sample-app && npm run build && npm run serve-dist -- --port 8080",
+    "start": "cd openui5-sample-app && npm run serve-dist -- --port 8080 --o index.html",
     "start-dist-self-contained": "cd openui5-sample-app && npm run build-self-contained && npm run serve-dist -- --port 8080"
   },
   "workspaces": [

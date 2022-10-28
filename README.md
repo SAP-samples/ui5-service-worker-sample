@@ -13,7 +13,7 @@ It includes the [openui5-sample-app](https://github.com/SAP/openui5-sample-app) 
 
 ## Requirements
 
-- [Node.js](https://nodejs.org/) Version 14 (npm version 8 is currently not supported)
+- [Node.js](https://nodejs.org/) Version 14 or later
 
 ## Download and Installation
 
@@ -27,13 +27,18 @@ It includes the [openui5-sample-app](https://github.com/SAP/openui5-sample-app) 
     npm install
     ```
 
+1. Build the application
+    ```sh
+    npm run build-ui5
+    ```
+
 1. Start a local server and run the application
     ```sh
     npm start
     ```
 
 1. Navigate to
-    http://localhost:8080/index-cdn.html
+    http://localhost:8080/index.html
 
 ## Video
 ![Video](assets/service-worker.gif)
@@ -68,7 +73,7 @@ This sample project was derived to showcase features originally presented at [UI
 
 * Build the sample application to serve this preload variant from a local server using h2
     ```sh
-    npm run start-h2
+    npm run build-h2
     ```
 
 ## Known Issues
