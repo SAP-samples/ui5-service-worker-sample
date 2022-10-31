@@ -1,6 +1,6 @@
 import test from "ava";
-import CacheStrategyBase from "../../../src/worker/strategies/CacheStrategy";
-import Version from "../../../src/worker/Version";
+import CacheStrategyBase from "../../../src/worker/strategies/CacheStrategy.js";
+import Version from "../../../src/worker/Version.js";
 import sinon from "sinon";
 
 test.before(t => {

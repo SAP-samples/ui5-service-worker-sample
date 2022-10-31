@@ -1,5 +1,5 @@
-import CacheStrategy from "./CacheStrategy";
-import Version from "../Version";
+import CacheStrategy from "./CacheStrategy.js";
+import Version from "../Version.js";
 
 /**
  * Caches everything and updates the cache with each request in the background

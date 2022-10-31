@@ -1,5 +1,5 @@
-import CacheStrategy from "./CacheStrategy";
-import Version from "../Version";
+import CacheStrategy from "./CacheStrategy.js";
+import Version from "../Version.js";
 
 /**
  * Expires after given amount of time `timeInMs` after last request has been made

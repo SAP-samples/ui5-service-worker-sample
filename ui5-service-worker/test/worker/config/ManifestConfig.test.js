@@ -1,7 +1,7 @@
 import test from "ava";
 import sinon from "sinon";
 
-import ManifestConfig from "../../../src/worker/config/ManifestConfig";
+import ManifestConfig from "../../../src/worker/config/ManifestConfig.js";
 
 var fetchStub;
 var appJsonContent = {

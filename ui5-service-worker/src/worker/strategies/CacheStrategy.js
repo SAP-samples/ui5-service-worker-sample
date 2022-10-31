@@ -1,4 +1,4 @@
-import CacheManager from "../CacheManager";
+import CacheManager from "../CacheManager.js";
 
 /**
  * CacheStrategy base class

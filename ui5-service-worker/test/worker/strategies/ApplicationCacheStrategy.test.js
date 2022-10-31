@@ -1,7 +1,7 @@
 import test from "ava";
 import sinon from "sinon";
 
-import ApplicationCacheStrategy from "../../../src/worker/strategies/ApplicationCacheStrategy";
+import ApplicationCacheStrategy from "../../../src/worker/strategies/ApplicationCacheStrategy.js";
 
 var fetchStub;
 var oApplicationCacheStrategy;

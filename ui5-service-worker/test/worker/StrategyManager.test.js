@@ -1,5 +1,5 @@
 import test from "ava";
-import StrategyManager from "../../src/worker/StrategyManager";
+import StrategyManager from "../../src/worker/StrategyManager.js";
 import sinon from "sinon";
 
 var oStrategyManager;

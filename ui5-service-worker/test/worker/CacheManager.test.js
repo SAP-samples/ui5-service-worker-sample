@@ -1,6 +1,6 @@
 import test from "ava";
-import Version from "../../src/worker/Version";
-import CacheManager from "../../src/worker/CacheManager";
+import Version from "../../src/worker/Version.js";
+import CacheManager from "../../src/worker/CacheManager.js";
 
 var oCacheManager;
 test.beforeEach(async function() {
