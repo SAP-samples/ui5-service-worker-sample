@@ -2,6 +2,7 @@
   "name": "ui5-service-worker",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "private": true,
   "scripts": {
     "test": "ava --serial",
@@ -9,11 +10,6 @@
     "setup-es5": "webpack --config webpack.es5.config.js",
     "setup-watch": "webpack --watch --config webpack.config.js",
     "start": "npm run setup && node src/server.js"
-  },
-  "ava": {
-    "require": [
-      "esm"
-    ]
   },
   "keywords": [],
   "dependencies": {
