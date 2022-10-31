@@ -71,9 +71,9 @@ This sample project was derived to showcase features originally presented at [UI
 
 ## Alternative Scenarios
 
-* Build the sample application to serve this preload variant from a local server using h2
+* Serve the sample application with a local server using h2
     ```sh
-    npm run build-h2
+    npm run start-h2
     ```
 
 ## Known Issues
