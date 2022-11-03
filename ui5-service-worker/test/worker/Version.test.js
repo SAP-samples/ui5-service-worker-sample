@@ -1,5 +1,5 @@
 import test from "ava";
-import Version from "../../src/worker/Version";
+import Version from "../../src/worker/Version.js";
 
 test("Should parse version from string with delimiter", assert => {
 	var version = Version.fromStringWithDelimiter("GG_1.55.3", "_");

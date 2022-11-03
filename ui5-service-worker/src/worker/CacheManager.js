@@ -1,5 +1,5 @@
-import Version from "./Version";
-import Logger from "./Logger";
+import Version from "./Version.js";
+import Logger from "./Logger.js";
 
 /**
  * Represents a cache managing class for the cache storage

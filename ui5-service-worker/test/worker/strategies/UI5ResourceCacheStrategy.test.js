@@ -1,5 +1,5 @@
 import test from "ava";
-import UI5ResourceCacheStrategy from "../../../src/worker/strategies/UI5ResourceCacheStrategy";
+import UI5ResourceCacheStrategy from "../../../src/worker/strategies/UI5ResourceCacheStrategy.js";
 import sinon from "sinon";
 var fetchStub;
 var selfStub;

@@ -1,5 +1,5 @@
-import Version from "../Version";
-import CacheStrategy from "./CacheStrategy";
+import Version from "../Version.js";
+import CacheStrategy from "./CacheStrategy.js";
 
 export default class UI5ResourceCacheStrategy extends CacheStrategy {
 	constructor(config) {

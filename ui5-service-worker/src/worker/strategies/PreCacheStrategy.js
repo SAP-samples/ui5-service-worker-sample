@@ -1,5 +1,5 @@
-import CacheStrategy from "./CacheStrategy";
-import Version from "../Version";
+import CacheStrategy from "./CacheStrategy.js";
+import Version from "../Version.js";
 
 /**
  * This caching strategy initially caches the given set of urls

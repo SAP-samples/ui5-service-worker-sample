@@ -1,6 +1,6 @@
-import Version from "../Version";
-import CacheStrategy from "./CacheStrategy";
-import ManifestConfig from "../config/ManifestConfig";
+import Version from "../Version.js";
+import CacheStrategy from "./CacheStrategy.js";
+import ManifestConfig from "../config/ManifestConfig.js";
 
 export default class ApplicationCacheStrategy extends CacheStrategy {
 	constructor(config) {
