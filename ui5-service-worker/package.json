@@ -21,7 +21,7 @@
     "@babel/preset-env": "^7.19.4",
     "ava": "^5.0.1",
     "babel-core": "^6.26.3",
-    "babel-loader": "^9.0.1",
+    "babel-loader": "^9.1.0",
     "babel-preset-env": "^1.7.0",
     "esm": "^3.2.25",
     "sinon": "^14.0.1",
