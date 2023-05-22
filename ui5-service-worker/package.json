@@ -24,7 +24,7 @@
     "babel-loader": "^9.1.2",
     "babel-preset-env": "^1.7.0",
     "esm": "^3.2.25",
-    "sinon": "^15.0.4",
+    "sinon": "^15.1.0",
     "webpack": "^5.83.1",
     "webpack-cli": "^4.10.0"
   }
