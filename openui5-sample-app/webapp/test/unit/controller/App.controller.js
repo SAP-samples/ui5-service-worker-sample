@@ -1,3 +1,5 @@
+/* global QUnit, sinon */
+
 sap.ui.define([
 	"sap/ui/base/ManagedObject",
 	"sap/ui/core/mvc/Controller",
