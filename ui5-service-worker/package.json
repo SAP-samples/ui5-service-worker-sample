@@ -13,7 +13,7 @@
   },
   "keywords": [],
   "dependencies": {
-    "devcert-sanscache": "^0.4.8",
+    "devcert-sanscache": "^0.5.1",
     "express": "^4.19.2"
   },
   "devDependencies": {
