@@ -14,7 +14,7 @@
   "keywords": [],
   "dependencies": {
     "devcert-sanscache": "^0.5.1",
-    "express": "^4.21.0"
+    "express": "^4.21.1"
   },
   "devDependencies": {
     "@babel/core": "^7.25.7",
