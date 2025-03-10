@@ -7,12 +7,12 @@ SPDX-PackageComment = "The code in this project may include calls to APIs (“AP
 [[annotations]]
 path = "**"
 precedence = "aggregate"
-SPDX-FileCopyrightText = "2021 SAP SE or an SAP affiliate company and [YOUR REPO NAME] contributors"
+SPDX-FileCopyrightText = "2021 SAP SE or an SAP affiliate company and sap-samples/ui5-service-worker-sample contributors"
 SPDX-License-Identifier = "Apache-2.0"
 
 [[annotations]]
 path = "openui5-sample-app/**"
 precedence = "aggregate"
-SPDX-FileCopyrightText = "2018-2020 SAP SE or an SAP affiliate company and openui5-sample-app contributors"
+SPDX-FileCopyrightText = "2018-2020 SAP SE or an SAP affiliate company and SAP/openui5-sample-app contributors"
 SPDX-License-Identifier = "Apache-2.0"
 SPDX-FileComment = "0.2.0 dc366078faa147c193eda06ab10958e1330e5c20"
