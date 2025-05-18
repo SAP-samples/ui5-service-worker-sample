@@ -23,7 +23,7 @@
     "babel-loader": "^9.2.1",
     "esm": "^3.2.25",
     "sinon": "^20.0.0",
-    "webpack": "^5.99.7",
+    "webpack": "^5.99.8",
     "webpack-cli": "^4.10.0"
   }
 }
