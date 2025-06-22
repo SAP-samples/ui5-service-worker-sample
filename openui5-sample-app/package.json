@@ -19,7 +19,7 @@
 		"serve-dist": "ws --compress -d dist"
 	},
 	"devDependencies": {
-		"@ui5/cli": "^4.0.18",
+		"@ui5/cli": "^4.0.19",
 		"eslint": "^9.29.0",
 		"@eslint/js": "^9.26.0",
 		"globals": "^16.2.0",
