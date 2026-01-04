@@ -22,7 +22,7 @@
 		"@ui5/cli": "^4.0.39",
 		"eslint": "^9.39.2",
 		"@eslint/js": "^9.39.2",
-		"globals": "^16.5.0",
+		"globals": "^17.0.0",
 		"karma": "^6.4.4",
 		"karma-chrome-launcher": "^3.2.0",
 		"karma-coverage": "^2.2.1",
