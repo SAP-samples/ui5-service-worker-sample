@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.28.5",
-    "@babel/preset-env": "^7.28.5",
+    "@babel/preset-env": "^7.28.6",
     "ava": "^6.4.1",
     "babel-loader": "^9.2.1",
     "esm": "^3.2.25",
