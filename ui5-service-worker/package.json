@@ -20,7 +20,7 @@
     "@babel/core": "^7.29.0",
     "@babel/preset-env": "^7.28.6",
     "ava": "^6.4.1",
-    "babel-loader": "^9.2.1",
+    "babel-loader": "^10.1.1",
     "esm": "^3.2.25",
     "sinon": "^21.0.1",
     "webpack": "^5.104.1",
